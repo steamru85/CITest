@@ -19,8 +19,9 @@ namespace Test
         public void SomeStorage_CallAllMethods_NoException()
         {
             var id = GetSomeStorage().Create("Вася");
-            GetSomeStorage().Update(id, "Вася");
-            Assert.Equals(GetSomeStorage().Read(id), "Петя"); 
+            GetSomeStorage().Update(id, "Петя");
+            var name = GetSomeStorage().Read(id);
+            Assert.AreEqual(name, "Петя"); 
         }
 
         [Test]
