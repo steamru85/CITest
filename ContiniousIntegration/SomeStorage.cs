@@ -21,7 +21,7 @@ namespace ContiniousIntegration
         
         public int Create(string name)
         {
-            return GetDbMapper().ExecuteScalar<int>("insert into test values (':name') returning id", new QueryParameter("name", name));
+            return GetDbMapper().ExecuteScalar<int>("insert into test values (:name) returning id", new QueryParameter("name", name));
         }
         
         public void Update(int id, string name)

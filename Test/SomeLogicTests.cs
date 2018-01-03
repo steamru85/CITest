@@ -25,16 +25,11 @@ namespace Test
             Assert.True(new SomeLogic().Divide(1,1) == 1);
         }
         
+        
         [Test]
         public void Sum_BaseScenario_SubtractIsCorrect()
         {
-            Assert.True(new SomeLogic().Multiply(1,1) == 1);
-        }
-        
-        [Test]
-        public void Sum_BaseScenario_SubtreactIsCorrect()
-        {
-            Assert.True(new SomeLogic().Subtract(1,1) == 1);
+            Assert.True(new SomeLogic().Subtract(1,1) == 0);
         }
     }
 }
